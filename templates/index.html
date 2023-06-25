@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Congrats you two!</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+	<div id="container">
+		<img src="https://a0.anyrgb.com/pngimg/1096/1446/wedding-cake-topper-silhouettes-bridesmaid-wedding-reception-bridegroom-wedding-cake-bride-marriage-wedding-man-thumbnail.png">
+		<br>
+		<p>It's great to see you, thanks for coming!</p>
+		<p>Now, please choose from the options below for the gift you'd like to receive! It may take up to 24 hrs to see receipt of said item from when you select it...</p>
+		<p>If Colin isn't awake right now ofc!</p>
+		<form action="choose_gift" method="post">
+			<p>Please choose one:</p>
+			<input type="radio" name="gift_type" value="Amazon">Amazon Gift Card
+			<input type="radio" name="gift_type" value="Walmart">Walmart Gift Card
+			<input type="radio" name="gift_type" value="BestBuy">Best Buy Gift Card
+			<input type="radio" name="gift_type" value="other">Other - Please describe below
+			<input type="text" name="gift_type">
+			<br>
+			<input type="submit" value="Submit" id="submit">
+
+			{% for msg in get_flashed_messages() %}
+				<p>{{msg}}</p>
+			{% endfor %}
+		</form>
+	</div>
+</body>
+</html>
