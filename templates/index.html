@@ -15,10 +15,18 @@
 		<p>If Colin isn't awake right now ofc!</p>
 		<form action="choose_gift" method="post">
 			<p>Please choose one:</p>
-			<input type="radio" name="gift_type" value="Amazon">Amazon Gift Card
-			<input type="radio" name="gift_type" value="Walmart">Walmart Gift Card
-			<input type="radio" name="gift_type" value="BestBuy">Best Buy Gift Card
-			<input type="radio" name="gift_type" value="other">Other - Please describe below
+			<input type="radio" name="gift_type" value="Amazon" class="radio" id ="amazon">
+			<label for="amazon">Amazon Gift Card</label>
+			<br>
+			<input type="radio" name="gift_type" value="Walmart" class="radio" id="walmart">
+			<label for="walmart">Walmart Gift Card</label>
+			<br>
+			<input type="radio" name="gift_type" value="BestBuy" class="radio" id="bestbuy">
+			<label for="bestbuy">Best Buy Gift Card</label>
+			<br>
+			<input type="radio" name="gift_type" value="Other" class="radio" id="other">
+			<label for="other">Other - Please describe below</label>
+			<br>
 			<input type="text" name="gift_type">
 			<br>
 			<input type="submit" value="Submit" id="submit">
